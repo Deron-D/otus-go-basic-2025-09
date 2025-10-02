@@ -71,3 +71,39 @@ git status
 git add .
 git commit -am "hw02 initial commit"
 ~~~
+
+4. Создать pull request и смержить изменения в базовую ветку на github
+![img.png](img.png) 
+
+5. Обновить локальную базовую ветку fetch, pull;
+
+~~~bash
+git checkout main
+~~~
+~~~console
+Переключились на ветку «main»
+Эта ветка соответствует «origin/main».
+~~~
+~~~bash
+git fetch origin
+~~~
+~~~console
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Распаковка объектов: 100% (1/1), 901 байт | 901.00 КиБ/с, готово.
+Из github.com:Deron-D/otus-go-basic-2025-09
+   4162e3f..a79b383  main       -> origin/main
+~~~
+~~~bash
+git rebase origin/main
+~~~
+~~~console
+Успешно перемещён и обновлён refs/heads/main.
+~~~
+
+7. Проверить что все изменения комита в основной ветке.
+~~~
+git diff main hw02 --name-status
+~~~

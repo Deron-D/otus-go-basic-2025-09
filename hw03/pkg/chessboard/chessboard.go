@@ -2,7 +2,7 @@ package chessboard
 
 import "strings"
 
-func createChessboard(size int) string {
+func CreateChessboard(size int) string {
 	var board strings.Builder
 
 	for i := 0; i < size; i++ {

@@ -8,8 +8,14 @@ import (
 
 func main() {
 	var size int
+
 	fmt.Print("Введите размер шахматной доски: ")
-	fmt.Scan(&size)
+
+	_, err := fmt.Scan(&size)
+	if err != nil {
+		fmt.Println("Ошибка: пожалуйста, введите целое число!")
+		return
+	}
 
 	if size <= 0 {
 		fmt.Println("Размер должен быть положительным числом!")

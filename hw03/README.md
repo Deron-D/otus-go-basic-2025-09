@@ -30,7 +30,13 @@
 ---
 
 ## **Выполнено:**
-
+~~~bash
+go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+~~~
+~~~bash
+golangci-lint run ./... && echo $?
+0
+~~~
 ~~~console
 ➜  hw03 git:(hw03) go run ./cmd/main.go 
 Введите размер шахматной доски: 5

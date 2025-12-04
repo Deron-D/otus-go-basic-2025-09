@@ -35,18 +35,18 @@
 
 ## **Выполнено:**
 
-# Переходим в проект
+### Переходим в проект
 ~~~bash
 cd ../static-server
 ~~~
 
-# Собираем и запускаем
+### Собираем и запускаем
 ~~~bash
 go build ./cmd/server
 ./server -port=8080 -dir=./static
 ~~~
 
-# Проверяем
+### Проверяем
 ~~~bash
 curl http://localhost:8080/
 curl http://localhost:8080/style.css
